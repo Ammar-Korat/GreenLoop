@@ -1,0 +1,72 @@
+<!-- ═══════════════════════════════════════
+     screens/support.html
+     ═══════════════════════════════════════ -->
+<div id="screen-support" class="screen">
+  <div class="topbar">
+    <div class="wordmark" onclick="goTo('screen-impact')"><span class="dot"></span>GreenLoop</div>
+    <span style="font-size:0.82rem;color:var(--muted)">💬 Support</span>
+  </div>
+  <div class="wrap">
+    <div class="label">❓ Help Center</div>
+    <h1 class="page-h">How can we help?</h1>
+    <p class="page-sub">Find answers quickly or reach out to our team.</p>
+
+    <!-- Contact cards -->
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="cc-icon">📧</div>
+        <h4>Email Support</h4>
+        <p>hello@greenloop.eg</p>
+      </div>
+      <div class="contact-card">
+        <div class="cc-icon">📞</div>
+        <h4>Call Us</h4>
+        <p>+20 2 1234 5678<br><span style="font-size:0.75rem">9 AM – 5 PM, Sun–Thu</span></p>
+      </div>
+    </div>
+
+    <!-- FAQ accordion -->
+    <div class="sh2" style="margin-bottom:16px">Frequently Asked Questions</div>
+    <div style="margin-bottom:28px">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How is my payout calculated? <span class="faq-chev">▼</span></div>
+        <div class="faq-a">Your payout is estimated based on material type and entered quantities. The final amount is confirmed after our team weighs your materials at pickup. Prices update regularly based on market rates.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How long does pickup take? <span class="faq-chev">▼</span></div>
+        <div class="faq-a">Pickup is typically scheduled within 1–3 business days after you submit your request. You'll receive an SMS confirmation with your exact pickup window.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Which cities does GreenLoop serve? <span class="faq-chev">▼</span></div>
+        <div class="faq-a">We currently serve Cairo, Giza, and Alexandria with more cities launching soon. If your city isn't listed, you can use the "Drop Off" option at a partner center.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is there a minimum weight requirement? <span class="faq-chev">▼</span></div>
+        <div class="faq-a">Yes — a minimum of 5 kg of mixed materials per pickup request. For self-delivery drop-offs, there's no minimum weight.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How secure is my data? <span class="faq-chev">▼</span></div>
+        <div class="faq-a">Your personal data and payment info are encrypted using AES-256. We never sell or share your data with third parties.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can businesses use GreenLoop? <span class="faq-chev">▼</span></div>
+        <div class="faq-a">Absolutely! We offer business accounts with scheduled recurring pickups, bulk pricing, and monthly impact reports. Contact us at business@greenloop.eg for custom plans.</div>
+      </div>
+    </div>
+
+    <!-- Contact form -->
+    <div class="sh2">Send us a Message</div>
+    <div class="card">
+      <div class="fg"><label class="fl">Your Name</label><input class="fi" type="text" placeholder="Full name"></div>
+      <div class="fg"><label class="fl">Email Address</label><input class="fi" type="email" placeholder="you@email.com"></div>
+      <div class="fg"><label class="fl">Message</label><textarea class="fi" placeholder="How can we help you?"></textarea></div>
+      <button class="btn btn-primary" onclick="sendMsg()">Send Message 📨</button>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align:center;padding:28px 0 8px;border-top:1px solid var(--sand2);margin-top:28px">
+      <div style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--g700);margin-bottom:6px">🌿 GreenLoop</div>
+      <div style="font-size:0.78rem;color:var(--muted)">Close the Loop. Recycle Smarter.<br>© 2025 GreenLoop Egypt. All rights reserved.</div>
+    </div>
+  </div>
+</div>

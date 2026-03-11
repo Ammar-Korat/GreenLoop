@@ -1,0 +1,30 @@
+<!-- ═══════════════════════════════════════
+     screens/dashboard.html
+     ═══════════════════════════════════════ -->
+<div id="screen-dashboard" class="screen dash-screen">
+  <div class="topbar">
+    <div class="wordmark"><span class="dot"></span>GreenLoop</div>
+    <div style="font-size:0.8rem;color:var(--muted)">♻️ Add Materials</div>
+  </div>
+  <div class="wrap-wide">
+    <div class="label">♻️ Materials</div>
+    <h1 class="page-h">What recyclables do you have?</h1>
+    <p class="page-sub">Select materials and set quantities. Final value confirmed after weighing.</p>
+
+    <!-- Material cards rendered by materials.js -->
+    <div class="material-grid" id="material-grid"></div>
+
+    <div class="summary-strip">
+      <div class="sum-item">
+        <div class="sum-label">Total Weight (est.)</div>
+        <div class="sum-val" id="total-weight">0 kg</div>
+      </div>
+      <div class="sum-item">
+        <div class="sum-label">Total Value (est.)</div>
+        <div class="sum-val" id="total-value">0 EGP</div>
+        <div class="sum-note">⚠️ Final amount after weighing</div>
+      </div>
+    </div>
+    <button class="btn btn-primary" onclick="goTo('screen-pickup')">Continue to Pickup Options →</button>
+  </div>
+</div>
