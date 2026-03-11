@@ -1,0 +1,45 @@
+<!-- ═══════════════════════════════════════
+     screens/payment.html
+     ═══════════════════════════════════════ -->
+<div id="screen-payment" class="screen">
+  <div class="topbar">
+    <div class="wordmark" onclick="goTo('screen-pickup')"><span class="dot"></span>GreenLoop</div>
+    <div style="font-size:0.8rem;color:var(--muted)">💳 Payment</div>
+  </div>
+  <div class="wrap">
+    <div class="label">💰 Payout</div>
+    <h1 class="page-h">How would you like to receive your payment?</h1>
+    <p class="page-sub">Your earnings will be transferred securely after your materials are processed.</p>
+
+    <div class="pm-list">
+      <!-- Bank Transfer -->
+      <div class="pm-card" onclick="pickPay('bank',this)">
+        <div class="pm-head"><span class="pm-icon">🏦</span> Bank Transfer <div class="pm-check">✓</div></div>
+        <div class="pm-fields" id="pf-bank">
+          <div class="fg"><label class="fl">Account Name</label><input class="fi" type="text" placeholder="Full name on account"></div>
+          <div class="fg"><label class="fl">IBAN</label><input class="fi" type="text" placeholder="EG XX XXXX XXXX XXXX XXXX XXXX XXXX"></div>
+        </div>
+      </div>
+      <!-- Vodafone Cash -->
+      <div class="pm-card" onclick="pickPay('vf',this)">
+        <div class="pm-head"><span class="pm-icon">📱</span> Vodafone Cash <div class="pm-check">✓</div></div>
+        <div class="pm-fields" id="pf-vf">
+          <div class="fg"><label class="fl">Vodafone Number</label><input class="fi" type="tel" placeholder="01X XXXX XXXX"></div>
+        </div>
+      </div>
+      <!-- InstaPay -->
+      <div class="pm-card" onclick="pickPay('ip',this)">
+        <div class="pm-head"><span class="pm-icon">⚡</span> InstaPay <div class="pm-check">✓</div></div>
+        <div class="pm-fields" id="pf-ip">
+          <div class="fg"><label class="fl">InstaPay ID</label><input class="fi" type="text" placeholder="Your InstaPay identifier"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-note">
+      <span class="note-icon">🔒</span>
+      <span>Payment details are stored using bank-grade AES-256 encryption and used only for transfers.</span>
+    </div>
+    <button class="btn btn-primary" onclick="goTo('screen-confirm')">Submit Recycling Request ✓</button>
+  </div>
+</div>

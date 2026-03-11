@@ -1,0 +1,68 @@
+<!-- ═══════════════════════════════════════
+     screens/pickup.html
+     ═══════════════════════════════════════ -->
+<div id="screen-pickup" class="screen">
+  <div class="topbar">
+    <div class="wordmark" onclick="goTo('screen-dashboard')"><span class="dot"></span>GreenLoop</div>
+    <div style="font-size:0.8rem;color:var(--muted)">🚛 Logistics</div>
+  </div>
+  <div class="wrap">
+    <div class="label">🚛 Logistics</div>
+    <h1 class="page-h">How would you like to send your recyclables?</h1>
+    <p class="page-sub">Choose the most convenient option for you.</p>
+
+    <!-- Pickup type toggle -->
+    <div class="pickup-grid">
+      <div class="p-opt" onclick="pickPickup('pickup',this)">
+        <div class="p-icon">🚚</div>
+        <h3>Request Pickup</h3>
+        <p>We come to your door at a scheduled time</p>
+      </div>
+      <div class="p-opt" onclick="pickPickup('deliver',this)">
+        <div class="p-icon">🏭</div>
+        <h3>Drop Off Yourself</h3>
+        <p>Deliver to a nearby recycling center</p>
+      </div>
+    </div>
+
+    <!-- Home pickup form -->
+    <div class="card p-detail" id="p-pickup">
+      <p style="font-weight:700;font-size:0.95rem;margin-bottom:18px;color:var(--ink)">📍 Pickup Details</p>
+      <div class="fg"><label class="fl">Full Address</label><input class="fi" type="text" placeholder="Street, Building, Floor, Area, City"></div>
+      <div class="fg">
+        <label class="fl">Preferred Time</label>
+        <select class="fi">
+          <option>Morning (8 AM – 12 PM)</option>
+          <option>Afternoon (12 PM – 4 PM)</option>
+          <option>Evening (4 PM – 8 PM)</option>
+        </select>
+      </div>
+      <div class="fg"><label class="fl">Contact Number</label><input class="fi" type="tel" placeholder="+20 1XX XXX XXXX"></div>
+    </div>
+
+    <!-- Drop-off center list -->
+    <div class="p-detail" id="p-deliver">
+      <p style="font-weight:700;font-size:0.95rem;margin-bottom:14px;color:var(--ink)">📍 Nearby Recycling Centers</p>
+      <div class="center-list">
+        <div class="center-row">
+          <div class="c-pip" style="background:var(--g400)"></div>
+          <div class="c-info"><h4>GreenLoop Cairo Hub</h4><p>Nasr City, Cairo</p></div>
+          <div class="c-dist">1.2 km</div>
+        </div>
+        <div class="center-row">
+          <div class="c-pip" style="background:var(--g300)"></div>
+          <div class="c-info"><h4>EcoCenter Maadi</h4><p>Maadi, Cairo</p></div>
+          <div class="c-dist">3.8 km</div>
+        </div>
+        <div class="center-row">
+          <div class="c-pip" style="background:var(--g200)"></div>
+          <div class="c-info"><h4>RecyclePoint Dokki</h4><p>Dokki, Giza</p></div>
+          <div class="c-dist">5.1 km</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gap-btn"></div>
+    <button class="btn btn-primary" onclick="goTo('screen-payment')">Continue to Payment →</button>
+  </div>
+</div>

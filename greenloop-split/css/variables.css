@@ -1,0 +1,55 @@
+/* ════════════════════════════════════════
+   variables.css — Design tokens & reset
+   ════════════════════════════════════════ */
+
+:root {
+  /* Green palette */
+  --g900: #071a0e;
+  --g800: #0e2f1a;
+  --g700: #164526;
+  --g600: #1e5c33;
+  --g500: #287a45;
+  --g400: #35a05c;
+  --g300: #56c97d;
+  --g200: #90e0aa;
+  --g100: #c2f0d1;
+  --g50:  #edfaf3;
+
+  /* Neutrals */
+  --sand:  #f5f0e8;
+  --sand2: #ede6d8;
+  --cream: #faf8f4;
+  --ink:   #0f1c13;
+  --ink2:  #2d3f34;
+  --muted: #7a8f82;
+  --white: #ffffff;
+
+  /* Accents */
+  --accent:  #e8a030;
+  --accent2: #d4562a;
+
+  /* Radii */
+  --r20: 20px;
+  --r12: 12px;
+  --r8:  8px;
+
+  /* Shadows */
+  --shadow:    0 2px 8px  rgba(7,26,14,0.08);
+  --shadow-md: 0 8px 32px rgba(7,26,14,0.12);
+  --shadow-lg: 0 20px 60px rgba(7,26,14,0.18);
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
